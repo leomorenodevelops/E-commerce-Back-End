@@ -28,6 +28,7 @@ router.get('/:id', (req, res) => {
       res.status(404).json({ message: 'No Category was found with that id! '});
       return;
     }
+    res.status(200).json(singleCategoryData);
   } catch (err) {
     res.status(500).json(err);
   }
